@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>UniTask #1</title>
+        <script type="text/javascript">
+            function getName(){
+                name = document.forms["task"].elements["name"].value;
+                alert('Hello, '+ name +'!');
+            }
+        </script>
+    </head>
+    <body>
+        <form id="task" name="task">
+             Enter your name: <input type="text" id="name" name="name" />
+            <input type="button" value="Ok" onClick="getName();" />
+        </form>
+    </body>
+</html>
