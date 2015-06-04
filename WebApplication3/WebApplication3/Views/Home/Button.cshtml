@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Button";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<script type="text/javascript">
+    function getName() {
+        name = document.forms["task"].elements["name"].value;
+        alert('Hello, ' + name + '!');
+    }
+</script>
+
+<form id="task" name="task">
+    Введите свое имя: <input type="text" id="name" name="name" />
+    <input type="button" value="Сlick Me" onclick="getName();" />
+</form>
