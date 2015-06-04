@@ -1,0 +1,72 @@
+header {
+ font: 40pt ; 
+    color: maroon;
+	  }
+
+nav {
+    color: green;
+    }
+
+ li{
+	display: inline
+   }
+a {
+color: blue;
+	padding:0px 20px;
+	 font: 18pt ; 
+	}
+
+li a.active{
+color: red;
+	 font: 20pt ; 
+		   }
+
+article {
+    color: red;
+        }
+
+text {
+
+    color: black;
+	}
+
+aside {
+    color: gray;
+	}
+
+body 
+{
+	margin-left: 10%;
+}
+#footer {
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding: 10px; /* Поля вокруг текста */
+    background: #39b54a; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+   }
+#sidebar {
+    width: 118px;
+    background-color: #fff;
+    min-height: 100px;
+    box-shadow:-2px 2px 5px rgba(200, 200, 200, 0.31);
+    border-width:1px 0 1px 1px;
+    border-style:solid;
+    border-color:#d2d2d2;
+    margin: 0px 0 15px 0; 
+    padding: 15px 10px;
+    float: right; 
+	behavior: url(ie-css3.htc);
+}
+.box {
+    -moz-border-radius: 15px; /* Firefox */
+    -webkit-border-radius: 15px; /* Safari and Chrome */
+    border-radius: 15px; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 */
+ 
+    -moz-box-shadow: 10px 10px 20px #000; /* Firefox */
+    -webkit-box-shadow: 10px 10px 20px #000; /* Safari and Chrome */
+    box-shadow: 10px 10px 20px #000; /* Opera 10.5+, future browsers and IE6+ using IE-CSS3 */
+ 
+    behavior: url(ie-css3.htc); /* This lets IE know to call the script on all elements which get the 'box' class */
+}
