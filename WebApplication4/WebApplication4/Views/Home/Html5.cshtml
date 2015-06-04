@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Html5";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML 5</title>
+    <link rel="stylesheet" type="text/css" href="html5.css" />
+    <script>
+        function showPosition() {
+            var x = document.getElementById("geo");
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (p) {
+                    x.innerHTML = "Latitude:" + p.coords.latitude + "<br>Longitude:" + p.coords.longitude;
+                }, function (err) { alter(err.message); });
+            } else { x.innerHTML = "Geolocation is not supported by browser"; }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Заголовок</h1>
+        <span id="geo"></span>
+    </header>
+
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Главная", "Index", "Home")</li>
+            <li>@Html.ActionLink("Форум", "About", "Home")</li>
+            <li>@Html.ActionLink("Контакты", "Contact", "Home")</li>
+            <li>@Html.ActionLink("Новости", "Html5", "Home")</li>
+        </ul>
+    </div>
+    
+    <section>
+        <article>
+            <h2>В Польше откопали горшки с тысячами серебряных монет </h2>
+            Два керамических горшка, наполненных старинными монетами, были обнаружены польским лесником в лесу рядом с деревней Гузов. Всего в сосудах находилось более 6 тыс. серебряных монет, датированных XVI-XVII вв. Монеты были отправлены в Археологический музей города Свидница, сообщает PAP.
+
+        </article>
+        <aside>Эта новость опубликована <time datetime="2015-04-07">25 апреля 2015 года</time>          
+        </aside>
+    </section>
+    <input type="button" value="Click me" onclick="showPosition()" />
+    <footer>
+       
+    </footer>
+</body>
+</html>
