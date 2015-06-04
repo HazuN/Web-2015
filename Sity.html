@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+    <title>CanvasTask</title>
+    <meta charset='utf-8' />
+</head>
+<body>
+    <canvas id='example'></canvas>
+    <script>
+
+        var positionX = 250;
+        var positionY = 50;
+
+
+
+        function draw() {
+            var canv = document.getElementById("example"),
+                ctx = canv.getContext('2d');
+
+
+            canv.width = 315;
+            canv.height = 315;
+
+            ctx.clearRect(0, 0, 315, 315);
+
+            //Sky
+            ctx.beginPath();
+
+            if (positionX < 260) {
+
+                ctx.beginPath();
+                ctx.fillStyle = "rgb(30,144,255)";
+                ctx.fillRect(15, 15, 300, 300);
+
+            }
+            if ((positionX >= 260) && (positionX < 280)) {
+                ctx.fillStyle = "rgb(65,105,255)";
+                ctx.fillRect(15, 15, 300, 300);
+
+            }
+            if ((positionX >= 280) && (positionX < 300)) {
+                ctx.fillStyle = "rgb(72,61,205)";
+                ctx.fillRect(15, 15, 300, 300);
+
+                ctx.fillStyle = 'yellow';
+                ctx.beginPath();
+                ctx.fillRect(25, 235, 15, 15);
+                ctx.fillRect(45, 260, 15, 15);
+                ctx.fillRect(25, 285, 15, 15);
+
+
+                ctx.fillRect(105, 185, 15, 15);
+                ctx.fillRect(125, 210, 15, 15);
+                ctx.fillRect(105, 235, 15, 15);
+                ctx.fillRect(125, 260, 15, 15);
+                ctx.fillRect(105, 285, 15, 15);
+
+                ctx.fillRect(210, 285, 15, 15);
+            }
+            if ((positionX >= 300) && (positionX < 320)) {
+                ctx.fillStyle = "rgb(25,25,112)";
+                ctx.fillRect(15, 15, 300, 300);
+            }
+            if (positionX >= 320) {
+                ctx.fillStyle = "rgb(0,0,128)";
+                ctx.fillRect(15, 15, 300, 300);
+            }
+
+
+
+
+
+            
+
+            //Дома
+            ctx.beginPath();
+            ctx.fillStyle = 'gray';
+            ctx.fillRect(20, 215, 50, 100);
+            ctx.fillRect(100, 165, 50, 150);
+            ctx.fillRect(200, 265, 50, 50);
+            ctx.save();
+
+         
+            //окно
+            ctx.fillStyle = 'rgb(69, 69, 69)';
+            ctx.beginPath();
+            ctx.fillRect(25, 235, 15, 15);
+            ctx.fillRect(45, 260, 15, 15);
+            ctx.fillRect(25, 285, 15, 15);
+
+            
+            ctx.fillRect(105, 185, 15, 15);
+            ctx.fillRect(125, 210, 15, 15);
+            ctx.fillRect(105, 235, 15, 15);
+            ctx.fillRect(125, 260, 15, 15);
+            ctx.fillRect(105, 285, 15, 15);
+
+            ctx.fillRect(210, 285, 15, 15);
+
+            //darkwin
+            if (positionX >= 280) {
+                ctx.fillStyle = 'yellow';
+                ctx.beginPath();
+                ctx.fillRect(25, 235, 15, 15);
+                ctx.fillRect(45, 260, 15, 15);
+                ctx.fillRect(25, 285, 15, 15);
+
+
+                ctx.fillRect(105, 185, 15, 15);
+                ctx.fillRect(125, 210, 15, 15);
+                ctx.fillRect(105, 235, 15, 15);
+                ctx.fillRect(125, 260, 15, 15);
+                ctx.fillRect(105, 285, 15, 15);
+
+                ctx.fillRect(210, 285, 15, 15);
+            }
+             
+            //трава
+            ctx.beginPath();
+            ctx.fillStyle = "brown";
+            ctx.fillRect(15, 310, 300, 5);
+            ctx.save();
+           
+
+
+            //солнце
+
+
+            ctx.beginPath();
+            ctx.fillStyle = "rgb(255,215,0)";
+            ctx.arc(positionX, positionY, 30, 80, 1 / 4 * Math.PI, true);
+            
+            
+            ctx.fill();
+
+
+            positionY += 0.5;
+            positionX += 0.5;
+
+
+
+            setTimeout("draw()", 20);
+        }
+        draw();
+
+    </script>
+</body>
+</html>
