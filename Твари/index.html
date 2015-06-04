@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script src="game.js"></script>
+        <title>RUNS</title>
+        <img id="tarakan" src="coc.png" style='display:none;' />
+        <img id="background" src="back.jpg" style='display:none;' />   
+    </head>
+    <body>
+        <section id="CanvasSection">
+            <canvas id="canvas" width="1124" height="600" style="border: 5px solid black"></canvas>
+        </section>
+ <table>
+   <tbody>
+     <tr>
+     <td>
+        <table>
+         <tbody>
+          <tr>
+	<td style="width: 250px; vertical-align: top; text-align: center;">
+         <h2>Players</h2>
+         <input type="radio" name="player" value="player1" id="p1"> Player 1 <br>
+         <input type="radio" name="player" value="player2" id="p2"> Player 2 <br>
+         <input type="radio" name="player" value="player3" id="p3"> Player 3 <br>
+     </td>
+
+ 	<td style="width: 250px; vertical-align: top; text-align: center;">
+         <h2>Bid</h2>
+         <b>N_track</b>
+  <br>
+         <input type="radio" name="nomer" id="1nomer" value="1"> 1 <br>
+         <input type="radio" name="nomer" id="2nomer" value="2"> 2 <br>
+         <input type="radio" name="nomer" id="3nomer" value="3"> 3 <br>
+         <input type="radio" name="nomer" id="4nomer" value="4"> 4 <br>
+                                        </p>
+
+        <b>Bid </b><input style="width: 200px;" type="text" id="cash" size="10">
+                                        <br><br>
+        <input type="button" name="addcash" value="Go" onclick="AddCash();"/>
+	</td>
+
+	<td style="width: 200px; vertical-align: top; text-align: center;">
+        <h2>History</h2>
+        <select style="width: 220px;" id="playercash" name="history" size="12"></select>
+	</td>
+
+	<td style="width: 200px; vertical-align: top; text-align: center;">
+         <h2>Result</h2>
+         <select style="width: 220px;" id="PlayerWin" name="result" size="12"></select>
+	</td>
+
+	<td style="width: 200px; vertical-align: top; text-align: center;">
+
+<!-Кнопка старт-!>
+<input style="width: 200px; hight: 100; font-size: 50;" type="button" value="START" id="goButton">
+	</td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+    </tr>
+    </tbody>
+  </table>
+</html>
